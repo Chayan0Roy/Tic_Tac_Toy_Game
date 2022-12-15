@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container .start_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 90px;
+    align-items: center;
+}
+
+.container .start_page.hide {
+    display: none;
+}
+
+.container .start_page h1 {
+    font-size: 100px;
+}
+
+.container .start_page h3 {
+    font-size: 40px;
+}
+
+.container .start_page .start_btn {
+    padding: 10px 25px;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.container .start_page .start_btn:hover {
+    color: #fff;
+}
+
+.container .board {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-weight: bold;
+}
+
+.container .board.hide {
+    display: none;
+}
+
+.container .board .line {
+    position: absolute;
+    background-color: yellow;
+    width: 0;
+    height: 3px;
+    transition: width 1s ease-in-out;
+    z-index: 2;
+}
+
+.container .board .cell {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 95px;
+    cursor: pointer;
+}
+
+.container .board .cell.PENone {
+    pointer-events: none;
+}
+
+.container .board .cell.br_0 {
+    border-right: none;
+}
+
+.container .board .cell.bl_0 {
+    border-left: none;
+}
+
+.container .board .cell.bt_0 {
+    border-top: none;
+}
+
+.container .board .cell.bb_0 {
+    border-bottom: none;
+}
+
+.container .result_page {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .result_page.hide {
+    display: none;
+}
+
+.container .result_page h2 {
+    font-size: 50px;
+}
+
+.container .result_page .reset_btn {
+    padding: 10px 25px;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.container .result_page .reset_btn:hover {
+    color: #fff;
+}
